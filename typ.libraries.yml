@@ -1,0 +1,41 @@
+global:
+  version: 1.0
+  css:
+    theme:
+      assets/css/bootstrap.min.css: {}
+      assets/css/fontawesome.css: {}
+      assets/css/animate.css: {}
+      assets/css/cursor.css: {}
+      assets/css/slick.css: {}
+      assets/css/slick-theme.css: {}
+      assets/css/magnific-popup.css: {}
+      assets/css/vanilla-calendar.min.css: {}
+      assets/css/style.css: {}
+      assets/css/flaticon.css: {}
+      assets/css/jquery-ui.css: {}
+      assets/css/nice-select.css: {}
+      assets/css/typ-2025-style.css: {}
+  js:
+    assets/js/jquery.min.js: {}
+    assets/js/popper.min.js: {}
+    assets/js/bootstrap.min.js: {}
+    assets/js/bootstrap-dropdown-ml-hack.js: {}
+    assets/js/cursor.js: {}
+    assets/js/wow.min.js: {}
+    assets/js/tilt.min.js: {}
+    assets/js/parallax.min.js: {}
+    assets/js/parallax-scroll.js: {}
+    assets/js/slick.min.js: {}
+    assets/js/magnific-popup.min.js: {}
+    assets/js/waypoint.js: {}
+    assets/js/counterup.min.js: {}
+    assets/js/countdown.js: {}
+    assets/js/vanilla-calendar.min.js: {}
+    assets/js/main.js: {}
+    assets/js/grained.js: {}
+    assets/js/grained.min.js: {}
+    assets/js/custom-grained.js: {}
+  dependencies: 
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

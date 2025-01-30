@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function typ_theme($existing, $type, $theme, $path) {
+  return [
+    'page__about' => [
+      'template' => 'page-about',
+      'path' => $path . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function typ_page_attachments(array &$attachments) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name === 'typ.about') {
+    $attachments['#attached']['library'][] = 'typ/about';
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function typ_menu() {
+  $items = [];
+  $items['about'] = [
+    'title' => 'About Us',
+    'page callback' => 'typ_about_page',
+    'access arguments' => ['access content'],
+  ];
+  return $items;
+}
+
+/**
+ * Callback for the About Us page.
+ */
+function typ_about_page() {
+  return [
+    '#theme' => 'page-about',
+  ];
+}
+
+function typ_preprocess_page(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name === 'typ.about') {
+    $variables['content'] = t('This is dynamic content from the theme.');
+  }
+}

@@ -75,11 +75,11 @@
 
       <!-- Site Header - Start
       ================================================== -->
-
-{% if route_name != 'system.404' %}
-  <script>
+<script>
     console.log("Route Name:", "{{ route_name }}");
   </script>
+{% if route_name != 'system.404' %}
+  
   <!-- Site Header - Start -->
   {% include '@typ/header/header.html.twig' %}
   <!-- Site Header - End -->  

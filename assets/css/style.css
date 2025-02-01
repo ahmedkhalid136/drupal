@@ -1108,10 +1108,6 @@ blockquote p {
   color: var(--color-light-gray);
 }
 
-.video_play_btn:hover {
-
-}
-
 .intro_video_section .shape_img_1 {
   top: -15px;
   right: -147px;

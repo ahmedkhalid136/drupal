@@ -65,6 +65,16 @@
     <div class="page_wrapper">
       <div id="grain-wrapper">
 
+      {# <!-- SVG background Hero & Upper Sections -->
+
+      {% set url = url('<current>') %}
+{% if 'home' in url|render|render %}
+<svg id="Layer_1" class="home_svg_pattern" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org"></svg>
+{% else %}
+<div role="main" class="main-container {{ container }} js-quickedit-main-content">
+{% endif %} #}
+      
+
       <!-- Back To Top - Start -->
       <div class="backtotop">
         <a href="#" class="scroll">
@@ -76,9 +86,8 @@
       <!-- Site Header - Start
       ================================================== -->
 
-{% if not is_404 %}
-        {% include '@typ/header/header.html.twig' %}
-      {% endif %}
+    {% include '@typ/header/header.html.twig' %}
+    
 
       <!-- Site Header - End
       ================================================== -->  
@@ -92,9 +101,8 @@
 
       <!-- Site Footer - Start
       ================================================== -->
-    {% if not is_404 %}
         {% include '@typ/footer/footer.html.twig' %}
-      {% endif %}
+   
       <!-- Site Footer - End
       ================================================== -->
     </div>

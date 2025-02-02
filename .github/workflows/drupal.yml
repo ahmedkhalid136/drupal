@@ -1,18 +1,21 @@
 name: Deploy on EC2
+
 on:
   push:
     branches: 
-      -  main
+      - main
     paths:
-      - 'deployment-message.txt'   
+      - 'deployment-message.txt'
+
 jobs:
   deploy:
     runs-on: self-hosted  # Uses the EC2 instance as a runner
     steps:
-      name: Check out repository
-      uses: actions/checkout@v3
-      name: Run commands on EC2
-      run: |
-        cd ../../var/www/html/themes/custom/typ-theme
-        git fetch
-        git pull
+      - name: Check out repository
+        uses: actions/checkout@v3
+      
+      - name: Run commands on EC2
+        run: |
+          cd /var/www/html/themes/custom/typ-theme
+          git fetch
+          git pull

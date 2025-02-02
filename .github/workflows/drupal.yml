@@ -17,5 +17,5 @@ jobs:
       - name: Run commands on EC2
         run: |
           cd /var/www/html/themes/custom/typ-theme
-          git fetch
-          git pull
+          sudo git fetch
+          sudo git pull

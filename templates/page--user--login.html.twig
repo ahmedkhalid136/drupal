@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Login your account – Collab – Online Learning Platform Template</title>
+    <link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.svg">
+
+    <!-- Framework - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <!-- Icon Font - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+
+    <!-- Animation - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+    <!-- Cursor - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+
+    <!-- Carousel - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+
+    <!-- Video & Image Popup - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+
+    <!-- Vanilla Calendar - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+
+    <!-- Custom - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  </head>
+
+
+  <body>
+
+    <!-- Body Wrap - Start -->
+    <div class="page_wrapper">
+
+      <!-- Back To Top - Start -->
+      <div class="backtotop">
+        <a href="#" class="scroll">
+          <i class="far fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- Back To Top - End -->
+
+      <!-- Site Header - Start
+      ================================================== -->
+          {% include '@typ/header/header.html.twig' %}
+
+      <!-- Site Header - End
+      ================================================== -->
+
+      <!-- Main Body - Start
+      ================================================== -->
+      <main class="page_content">
+
+        <!-- Register Section - Start
+        ================================================== -->
+        <section class="register_section section_space_lg">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col col-lg-5">
+                <h1 class="register_heading text-center">Account Login</h1>
+                <p class="register_heading_description text-center">
+                  Please enter your User/Email & Password
+                </p>
+<form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+  <div class="register_form signup_login_form">
+    <div class="form_item">
+      <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus"
+      placeholder="Username or Email"
+             autocomplete="username" data-drupal-selector="edit-name" type="text" id="edit-name"
+             name="name" size="60" maxlength="60" class="form-text required" required="required" aria-required="true">
+    </div>
+    <div class="form_item">
+      <input autocomplete="current-password" data-drupal-selector="edit-pass" type="password" placeholder="**********"
+             id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true">
+    </div>
+    <div class="remenber_forget row mb-3 align-items-center justify-content-between">
+      <div class="col col-6">
+        <div class="checkbox_item mb-0">
+          <input id="edit-remember" type="checkbox" name="remember" data-drupal-selector="edit-remember">
+          <label for="edit-remember">Remember me</label>
+        </div>
+      </div>
+      <div class="col col-6">
+        <div class="forget_password text-end">
+          <a href="{{ path('user.pass') }}">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add hidden fields required for Drupal form submission -->
+    <input type="hidden" name="form_build_id" value="{{ form.form_build_id.value }}">
+    <input type="hidden" name="form_id" value="user_login_form">
+
+   
+            <button class="btn btn_dark mb-5" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in">
+                      <span>
+                        <small>Login Now</small>
+                        <small>Login Now</small>
+                      </span>
+                    </button>
+    <p class="mb-0 text-center">Don't have an account? <a href="{{ path('user.register') }}">Register Here</a></p>
+  </div>
+</form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Register Section - End
+        ================================================== -->
+
+      </main>
+      <!-- Main Body - End
+      ================================================== -->
+
+      <!-- Site Footer - Start
+      ================================================== -->
+      {% include '@typ/footer/footer.html.twig' %}
+      <!-- Site Footer - End
+      ================================================== -->
+
+    </div>
+    <!-- Body Wrap - End -->
+
+  </body>
+</html>
+
+
+
+{# <form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+<div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element_label' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+<label for="edit-name" class="js-form-required form-required">Username</label>
+<!-- END OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__textfield' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--textfield.html.twig
+   ✅ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+<input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" autocomplete="username" data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required="required" aria-required="true">
+
+<!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+
+
+        </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'form_element_label' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+<label for="edit-pass" class="js-form-required form-required">Password</label>
+<!-- END OUTPUT from 'core/modules/system/templates/form-element-label.html.twig' -->
+
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__password' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--password.html.twig
+   ✅ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+<input autocomplete="current-password" data-drupal-selector="edit-pass" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true">
+
+<!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+
+
+        </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/form-element.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__hidden' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--hidden.html.twig
+   ✅ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+<input data-drupal-selector="form-5ksalfymqj229xejy3dzlwcf-0ucljxptlowazioew" type="hidden" name="form_build_id" value="form-5KsALFYmqJ229XejY3dZLWcF__0uClJxPtlOWaZIoew">
+
+<!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__hidden' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--hidden.html.twig
+   ✅ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+<input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+
+<!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'input__submit' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ input--submit.html.twig
+   ✅ input.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in" class="button js-form-submit form-submit">
+
+<!-- END OUTPUT from 'core/modules/system/templates/input.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/container.html.twig' -->
+
+
+</form> #}

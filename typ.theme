@@ -1,0 +1,9 @@
+<?php
+function my_custom_theme_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Example: Change the label of the username field
+  $form['name']['#title'] = t('Your Email or Username');
+
+  // Example: Add a custom class to the submit button
+  $form['actions']['submit']['#attributes']['class'][] = 'custom-login-button';
+}
+?>

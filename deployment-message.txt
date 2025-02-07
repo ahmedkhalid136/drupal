@@ -1,3 +1,4 @@
 1. Testing action runner
 2. Primary menu fix
 3. Login page created and links updated in header
+4. Header logo link fix

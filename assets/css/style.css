@@ -1966,8 +1966,8 @@ brutal_item {
   display: block;
   overflow: hidden;
   border-radius: 100%;
-  border: 2px solid #ffffff;
-  background-color: #ffffff;
+  border: 2px solid var(--color-light-gray);
+  background-color: var(--color-light-gray);
 }
 .banner_image_1 .deco_item {
   z-index: 1;
@@ -4332,6 +4332,11 @@ Responsive For Mobile & Tablet Devices
     margin-right: 10px;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
+    margin-right: 8px;
+    color: var(--color-dark-yellow);
+  }
+  .mobile_menu_btn:hover {
+    color: var(--color-mid-yellow);
   }
   .container,
 .site_header .container,
@@ -4611,6 +4616,13 @@ Responsive For Mobile & Tablet Devices
     font-size: 14px;
     line-height: 18px;
   }
+  .mobile_menu_btn {
+    margin-right: 8px;
+    color: var(--color-dark-yellow);
+  }
+  .mobile_menu_btn:hover {
+    color: var(--color-mid-yellow);
+  }
 }
 /* Media Screen 767px - End
 ================================================== */
@@ -4653,12 +4665,12 @@ Responsive For Mobile & Tablet Devices
   .header_btns_group .btn span small {
     padding: 4px 0;
   }
-  .mobile_menu_btn {
+  .mobile_menu_btn, .fa-bars {
     margin-right: 8px;
     color: var(--color-dark-yellow);
   }
-  .mobile_menu_btn:hover {
-    color: var(--color-dark-yellow);
+  .mobile_menu_btn:hover, .fa-bars:hover {
+    color: var(--color-mid-yellow);
   }
   .newslatter_box .form_item:has(.btn) {
     display: block;

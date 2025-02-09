@@ -406,6 +406,9 @@ hr {
   z-index: -1;
   position: absolute;
 }
+.deco_item {
+  opacity: 0.3;
+}
 .decoration_wrap .overlay {
   top: 0;
   left: 0;

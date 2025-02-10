@@ -406,6 +406,9 @@ hr {
   z-index: -1;
   position: absolute;
 }
+.deco_item {
+  opacity: 0.3;
+}
 .decoration_wrap .overlay {
   top: 0;
   left: 0;
@@ -697,7 +700,7 @@ ol[type="1"] > li:not(:last-child) {
 }
 .info_list a {
   display: block;
-  color: #29281E;
+  color: var(--color-mid-gray);
 }
 .info_list a:hover {
   opacity: 0.7;
@@ -746,7 +749,8 @@ ol[type="1"] > li:not(:last-child) {
 .tags_list a {
   display: block;
   font-size: 13px;
-  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-weight: 700;
   line-height: 16px;
   color: var(--color-dark-yellow);
   padding: 12px 16px;
@@ -762,7 +766,7 @@ ol[type="1"] > li:not(:last-child) {
           box-shadow: 3px 3px 0 0 var(--color-dark-yellow);
 }
 .tags_list.style_2 a {
-  background-color: #F6F6F6;
+  background-color: #ffffff;
 }
 
 .item_category_list {
@@ -772,6 +776,7 @@ ol[type="1"] > li:not(:last-child) {
 .item_category_list a {
   display: block;
   font-size: 13px;
+  letter-spacing: 0.5px;
   font-weight: 600;
   line-height: 16px;
   padding: 7px 12px;
@@ -1321,7 +1326,7 @@ blockquote p {
 
 .vanilla-calendar-day__btn_weekend,
 .vanilla-calendar-day__btn_holiday {
-  color: red;
+  color: #2c3d4f;
 }
 
 /* 2.13 - Calendar - End
@@ -1435,7 +1440,7 @@ brutal_item {
 }
 
 .counter_section.bg_primary .counter_item {
-  border-bottom: 1px solid #29281E;
+  border-bottom: 1px solid var(--color-mid-gray);
 }
 
 /* 2.16 - Counter - End
@@ -1780,7 +1785,7 @@ brutal_item {
 /* 2.22 - Comment - Start
 ================================================== */
 .recent_comments_list li {
-  color: #29281E;
+  color: var(--color-mid-gray);
 }
 .recent_comments_list li:not(:last-child) {
   margin-bottom: 10px;
@@ -1966,8 +1971,8 @@ brutal_item {
   display: block;
   overflow: hidden;
   border-radius: 100%;
-  border: 2px solid #ffffff;
-  background-color: #ffffff;
+  border: 2px solid var(--color-light-gray);
+  background-color: var(--color-light-gray);
 }
 .banner_image_1 .deco_item {
   z-index: 1;
@@ -2767,13 +2772,13 @@ brutal_item {
   margin-bottom: 10px;
 }
 .testimonial_item p {
-  color: #29281E;
+  color: var(--color-mid-gray);
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 18px;
 }
 .testimonial_item .testimonial_designation {
-  color: #29281E;
+  color: var(--color-mid-gray);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -2838,7 +2843,7 @@ brutal_item {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #29281E;
+  color: var(--color-mid-gray);
   margin-bottom: 30px;
   font-family: "BrutalMilkNo1-Regular", sans-serif;
 }
@@ -2955,7 +2960,7 @@ brutal_item {
 .blog_small .item_author {
   line-height: 1;
   display: block;
-  color: #29281E;
+  color: var(--color-mid-gray);
   margin-bottom: 8px;
 }
 .blog_small .item_title {
@@ -3526,7 +3531,7 @@ brutal_item {
   font-size: 24px;
   font-weight: 500;
   margin-right: 4px;
-  color: #29281E;
+  color: var(--color-mid-gray);
 }
 .page_banner .item_price .sale_price {
   font-size: 45px;
@@ -3819,7 +3824,7 @@ brutal_item {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #29281E;
+  color: var(--color-mid-gray);
   margin-bottom: 15px;
   font-family: "BrutalMilkNo1-Regular", sans-serif;
 }
@@ -3868,7 +3873,7 @@ brutal_item {
   font-size: 13px;
   font-weight: 500;
   line-height: 17px;
-  color: #29281E;
+  color: var(--color-mid-gray);
   text-transform: uppercase;
 }
 .prevnext_post_wrap .post_item strong {
@@ -4332,6 +4337,11 @@ Responsive For Mobile & Tablet Devices
     margin-right: 10px;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
+    margin-right: 8px;
+    color: var(--color-dark-yellow);
+  }
+  .mobile_menu_btn:hover {
+    color: var(--color-mid-yellow);
   }
   .container,
 .site_header .container,
@@ -4611,6 +4621,13 @@ Responsive For Mobile & Tablet Devices
     font-size: 14px;
     line-height: 18px;
   }
+  .mobile_menu_btn {
+    margin-right: 8px;
+    color: var(--color-dark-yellow);
+  }
+  .mobile_menu_btn:hover {
+    color: var(--color-mid-yellow);
+  }
 }
 /* Media Screen 767px - End
 ================================================== */
@@ -4653,12 +4670,12 @@ Responsive For Mobile & Tablet Devices
   .header_btns_group .btn span small {
     padding: 4px 0;
   }
-  .mobile_menu_btn {
+  .mobile_menu_btn, .fa-bars {
     margin-right: 8px;
     color: var(--color-dark-yellow);
   }
-  .mobile_menu_btn:hover {
-    color: var(--color-dark-yellow);
+  .mobile_menu_btn:hover, .fa-bars:hover {
+    color: var(--color-mid-yellow);
   }
   .newslatter_box .form_item:has(.btn) {
     display: block;

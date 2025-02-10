@@ -1,108 +1,164 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>Create an account – Collab – Online Learning Platform Template</title>
+</head>
 
-  </head>
-
-
-  <body>
+<body>
 
     <!-- Body Wrap - Start -->
     <div class="page_wrapper">
 
-      <!-- Back To Top - Start -->
-      <div class="backtotop">
-        <a href="#" class="scroll">
-          <i class="far fa-arrow-up"></i>
-        </a>
-      </div>
-      <!-- Back To Top - End -->
+        <!-- Back To Top - Start -->
+        <div class="backtotop">
+            <a href="#" class="scroll">
+                <i class="far fa-arrow-up"></i>
+            </a>
+        </div>
+        <!-- Back To Top - End -->
 
-      <!-- Site Header - Start
-      ================================================== -->
-      {% include '@typ/header/header.html.twig' %}
-      <!-- Site Header - End
-      ================================================== -->
+        <!-- Site Header - Start -->
+        {% include '@typ/header/header.html.twig' %}
+        <!-- Site Header - End -->
 
-      <!-- Main Body - Start
-      ================================================== -->
-      <main class="page_content">
+        <!-- Main Body - Start -->
+        <main class="page_content">
 
-        <!-- Register Section - Start
-        ================================================== -->
-        <section class="register_section section_space_lg">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col col-lg-5">
-                <h1 class="register_heading text-center">Create Account</h1>
-                <p class="register_heading_description text-center">
-                  Already have account? <a href="{{ path('user.login') }}">Login</a>
-                </p>
-                <form  data-user-info-from-browser="" data-drupal-selector="user-register-form" action="/user/register" method="post" id="user-register-form" accept-charset="UTF-8" data-once="form-updated user-info-from-browser" data-drupal-form-fields="edit-mail,edit-name,edit-submit">
-                  <div class="register_form signup_login_form">
-                    <div class="form_item">
-                    <input data-drupal-selector="edit-mail" placeholder="Email" aria-describedby="edit-mail--description" type="email" id="edit-mail" name="mail" value="" size="60" maxlength="254" required="required" aria-required="true">
+            <!-- Register Section - Start -->
+            <section class="register_section section_space_lg">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col col-lg-5">
+                            <h1 class="register_heading text-center">Create Account</h1>
+                            <p class="register_heading_description text-center">
+                                Already have an account? <a href="{{ path('user.login') }}">Login</a>
+                            </p>
+
+                            <form data-user-info-from-browser="" 
+                                  data-drupal-selector="user-register-form" 
+                                  action="/user/register" 
+                                  method="post" 
+                                  id="user-register-form" 
+                                  accept-charset="UTF-8" 
+                                  data-once="form-updated user-info-from-browser" 
+                                  data-drupal-form-fields="edit-mail,edit-name,edit-submit">
+
+                                <div class="register_form signup_login_form">
+                                    
+                                    <div class="form_item">
+                                        <input data-drupal-selector="edit-mail" 
+                                               placeholder="Email" 
+                                               aria-describedby="edit-mail--description" 
+                                               type="email" 
+                                               id="edit-mail" 
+                                               name="mail" 
+                                               value="" 
+                                               size="60" 
+                                               maxlength="254" 
+                                               required="required" 
+                                               aria-required="true">
+                                    </div>
+
+                                    <div class="form_item">
+                                        <input placeholder="Username" 
+                                               class="username form-text required" 
+                                               autocorrect="off" 
+                                               autocapitalize="off" 
+                                               spellcheck="false" 
+                                               data-drupal-selector="edit-name" 
+                                               aria-describedby="edit-name--description" 
+                                               type="text" 
+                                               id="edit-name" 
+                                               name="name" 
+                                               value="AhmedKhalid" 
+                                               size="60" 
+                                               maxlength="60" 
+                                               required="required" 
+                                               aria-required="true">
+                                    </div>
+
+                                    <div class="form_item">
+                                        <input placeholder="Create Password" 
+                                               class="password-field js-password-field form-text required" 
+                                               autocomplete="new-password" 
+                                               data-drupal-selector="edit-pass-pass1" 
+                                               type="password" 
+                                               id="edit-pass-pass1" 
+                                               name="pass[pass1]" 
+                                               size="25" 
+                                               maxlength="128" 
+                                               required="required" 
+                                               aria-required="true" 
+                                               data-once="password">
+                                    </div>
+
+                                    <div class="form_item">
+                                        <input placeholder="Confirm Password" 
+                                               class="password-confirm js-password-confirm form-text required" 
+                                               autocomplete="new-password" 
+                                               data-drupal-selector="edit-pass-pass2" 
+                                               type="password" 
+                                               id="edit-pass-pass2" 
+                                               name="pass[pass2]" 
+                                               size="25" 
+                                               maxlength="128" 
+                                               required="required" 
+                                               aria-required="true">
+                                    </div>
+
+                                    <button type="submit" 
+                                            class="btn btn_dark mb-5" 
+                                            data-drupal-selector="edit-submit" 
+                                            id="edit-submit" 
+                                            name="op" 
+                                            value="Create new account">
+                                        <span>
+                                            <small>Signup Now</small>
+                                            <small>Signup Now</small>
+                                        </span>
+                                    </button>
+
+                                    <p class="text-center">Or Login With</p>
+
+                                    <ul class="social_links unordered_list_center">
+                                        <li>
+                                            <a href="https://www.facebook.com/">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.google.com/">
+                                                <i class="fab fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form_item">
-                      <input type="password" name="createpassword" placeholder="Create Password">
-                    </div>
-                    <div class="form_item">
-                      <input type="password" name="confirmpassword" placeholder="Confirm Password">
-                    </div>
-                    <button type="submit" class="btn btn_dark mb-5">
-                      <span>
-                        <small>Signup Now</small>
-                        <small>Signup Now</small>
-                      </span>
-                    </button>
+                </div>
+            </section>
+            <!-- Register Section - End -->
 
-                    <p class="text-center">Or Login With</p>
+        </main>
+        <!-- Main Body - End -->
 
-                    <ul class="social_links unordered_list_center">
-                      <li>
-                        <a href="https://www.facebook.com/">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.google.com/">
-                          <i class="fab fa-google"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Register Section - End
-        ================================================== -->
-
-      </main>
-      <!-- Main Body - End
-      ================================================== -->
-
-      <!-- Site Footer - Start
-      ================================================== -->
-            {% include '@typ/footer/footer.html.twig' %}
-
-      <!-- Site Footer - End
-      ================================================== -->
+        <!-- Site Footer - Start -->
+        {% include '@typ/footer/footer.html.twig' %}
+        <!-- Site Footer - End -->
 
     </div>
 
-  </body>
+</body>
 </html>

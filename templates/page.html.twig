@@ -66,15 +66,27 @@
     <div class="page_wrapper">
       <div id="grain-wrapper">
 
-      {# <!-- SVG background Hero & Upper Sections -->
+      {# <!-- SVG background Hero & Upper Sections --> #}
 
-      {% set url = url('<current>') %}
-{% if 'home' in url|render|render %}
-<svg id="Layer_1" class="home_svg_pattern" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org"></svg>
-{% else %}
-<div role="main" class="main-container {{ container }} js-quickedit-main-content">
-{% endif %} #}
-      
+ {% set current_path = path('<current>') %}
+
+{% set routes = ['/node', '/user/login', '/user/register', '/404', '/coming-soon'] %}
+
+{% set show_full_width = false %}
+{% for route in routes %}
+  {% if route == current_path or (route == '/' and current_path == '') %}
+    {% set show_full_width = true %}
+  {% endif %}
+{% endfor %}
+
+{% if show_full_width %}
+<script>
+    console.log("Current path:", "{{ current_path }}");
+  </script>
+  <object id="Layer_1" class="home_svg_pattern"  type="image/svg+xml" data="https://typ-drupal-media.s3.us-east-1.amazonaws.com/images/Geometry+Grid+Patterns.svg"></object>
+{% endif %}
+
+
 
       <!-- Back To Top - Start -->
       <div class="backtotop">

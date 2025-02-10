@@ -69,6 +69,9 @@
       {# <!-- SVG background Hero & Upper Sections --> #}
 
  {% set current_path = path('<current>') %}
+ <script>
+    console.log("Current path:", "{{ current_path }}");
+  </script>
 
 {% set routes = ['/node', '/user/login', '/user/register', '/404', '/coming-soon'] %}
 
@@ -80,9 +83,7 @@
 {% endfor %}
 
 {% if show_full_width %}
-<script>
-    console.log("Current path:", "{{ current_path }}");
-  </script>
+
   <object id="Layer_1" class="home_svg_pattern"  type="image/svg+xml" data="https://typ-drupal-media.s3.us-east-1.amazonaws.com/images/Geometry+Grid+Patterns.svg"></object>
 {% endif %}
 

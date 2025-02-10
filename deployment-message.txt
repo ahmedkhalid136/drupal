@@ -3,3 +3,4 @@
 3. Login page created and links updated in header
 4. Header logo link fix
 5. SVG tag testing
+6. Debugging svg tag

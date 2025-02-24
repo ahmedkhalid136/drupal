@@ -5,3 +5,4 @@
 5. SVG tag testing
 6. Meta description added
 7. Font logic test
+8. Meta description added

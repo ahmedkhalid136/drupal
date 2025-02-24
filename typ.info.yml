@@ -3,14 +3,16 @@ type: theme
 description: "A brutalist theme for The Young Professional website"
 core_version_requirement: ^11 || ^10
 base theme: false
-
+favicon: "https://typ-drupal-media.s3.us-east-1.amazonaws.com/images/logo/favicon_boxed.png"
+logo: "https://typ-drupal-media.s3.us-east-1.amazonaws.com/images/logo/favicon_boxed.png"
 libraries:
   - typ/global
 
 regions:
   header: Header
-  primary_menu: 'Primary Menu'
-  content: Content  # Add this region for the menu
+  primary_menu: "Primary Menu"
+  content: Content # Add this region for the menu
+
 
   # primary_menu: "Primary menu"
   # secondary_menu: "Secondary menu"

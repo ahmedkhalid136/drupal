@@ -6,3 +6,4 @@
 6. Meta description added
 7. Font logic test
 8. Meta description added
+9. Favicon added

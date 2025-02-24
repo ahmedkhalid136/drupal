@@ -36,6 +36,7 @@ global:
     assets/js/grained.min.js: {}
     assets/js/custom-grained.js: {}
     assets/js/menu.js: {}
+    assets/js/font.js: {}
   dependencies: 
     - core/jquery
     - core/drupal
